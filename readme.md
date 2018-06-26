@@ -1,14 +1,14 @@
 # A Simple Reverse Proxy tool  
-
+[![Go Report Card](https://goreportcard.com/badge/github.com/Arryboom/reverse_proxy_go)](https://goreportcard.com/report/github.com/Arryboom/reverse_proxy_go)  
 **Devloped with GoLang**  
 
 Recently I got traffic block on music.163.com,so I need a reverse proxy to bypass it.First I tried nginx,it works good but I got a much more simple solution for non IT guys,here it is.  
 
 1.Just download captable execution file for your OS  
-[Win64](http://github.com/arryboom/reverse_proxy_go/blob/master/reverse_proxy64.exe)  
-[Win32](http://github.com/arryboom/reverse_proxy_go/blob/master/reverse_proxy32.exe)  
-[Linux64](http://github.com/arryboom/reverse_proxy_go/blob/master/reverse_proxy64)  
-[Linux32](http://github.com/arryboom/reverse_proxy_go/blob/master/reverse_proxy32)  
+[Win64](https://github.com/Arryboom/reverse_proxy_go/releases/download/1.0/reverse_proxy64.exe)  
+[Win32](https://github.com/Arryboom/reverse_proxy_go/releases/download/1.0/reverse_proxy32.exe)  
+[Linux64](https://github.com/Arryboom/reverse_proxy_go/releases/download/1.0/reverse_proxy64)  
+[Linux32](https://github.com/Arryboom/reverse_proxy_go/releases/download/1.0/reverse_proxy32)  
 2.Run it on a machine doesn't affected by filter rule(eg one of your VPS not in your company's local network),then you should got some echo like below:  
 > 2018/06/26 17:/57:28 Listening on 0.0.0.0:80, forwarding to http://music.163.com:80  
 
@@ -41,14 +41,14 @@ in source code file reverseproxy.go to change default proxy addr.
 You need install golang first to compile it in this situation.  
 And for cross platform compile:
 **For windows**  
->In CMD console:
- ```set GOARCH=386```
- for 32bit
- ```set GOARCH=amd64```
- for 64bit
-```set GOOS=windows```  
- then 
-```go build -o xxx.exe```
+>In CMD console:  
+ ```set GOARCH=386```  
+ for 32bit  
+ ```set GOARCH=amd64```  
+ for 64bit  
+```set GOOS=windows```    
+ then   
+```go build -o xxx.exe```  
 
 **For linux**  
 Replace GOOS value with keyword linux.
